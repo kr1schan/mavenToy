@@ -28,7 +28,6 @@
             <groupId>com.sipgate.toy</groupId>
             <artifactId>ejb1</artifactId>
             <version>1.1-SNAPSHOT</version>
-            <type>ejb</type>
         </dependency>
         <dependency>
             <groupId>com.sipgate.toy</groupId>
@@ -59,10 +58,12 @@
                             <artifactId>war2</artifactId>
                             <contextRoot>/foo2</contextRoot>
                         </webModule>
-                        <ejbModule>
+                        <jarModule>
                             <groupId>com.sipgate.toy</groupId>
                             <artifactId>ejb1</artifactId>
-                        </ejbModule>
+                            <includeInApplicationXml>true</includeInApplicationXml>
+                            <bundleDir>/</bundleDir>
+                        </jarModule>
                     </modules>
                 </configuration>
             </plugin>
